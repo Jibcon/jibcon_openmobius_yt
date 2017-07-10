@@ -27,7 +27,8 @@ global.usecsebase           = 'mobius-yt';
 global.usecseid             = '/mobius-yt';
 global.usecsebaseport       = conf.csebaseport;
 
-global.usedbhost            = 'localhost';
+global.usedbhost            = conf.dbhost;
+global.usedbaccount         = conf.dbaccount;
 global.usedbpass            = conf.dbpass;
 
 
