@@ -362,12 +362,15 @@ function request_noti_mqtt(nu, ri, xmlString, bodytype, xm2mri) {
             ca: fs.readFileSync('ca-crt.pem')
         };
 
+        console.log("Before request");
         req = https.request(options, function (res) {
             //res.setEncoding('utf8');
+            console.log("During https request, Before res.on");
 
             res.on('data', function (chunk) {
                 bodyStr += chunk;
             });
+            console.log("During https request, After res.on");
 
             res.on('end', function () {
                 if (res.statusCode == 200 || res.statusCode == 201) {
