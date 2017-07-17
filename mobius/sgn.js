@@ -389,6 +389,7 @@ function request_noti_mqtt(nu, ri, xmlString, bodytype, xm2mri) {
     });
 
     req.write(xmlString);
+    console.log(xmlString);
     req.end();
 }
 
